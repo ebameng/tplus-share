@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>tplus 开启图片的无限可能</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        var userAgent = navigator.userAgent;
+        window._NA_ = {
+            TencentStore: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus',
+            Android: 'http://dd.myapp.com/16891/10AC8E846399A81020C050FA06856629.apk?fsname=com%2Etplus_1%2E2%2E6_9.apk',
+            IOS: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus',
+            isWeixin: false,
+            isAndroid: /android/ig.test(userAgent),
+            isIOS: /(Mac OS)|iphone/ig.test(userAgent)
+        };
+
+        var  __uri = function (url) {
+            return url;
+        };
+
+        window.weixinData = {
+            "appId": "", // 服务号可以填写appId
+            "imgUrl": __uri('/static/img/tplus.png'),
+            "link": location.href,
+            "desc": 'tplus，加一下世界更精彩',
+            "title": '从tplus分享了一张图片'
+        };
+    </script>
+    <link rel="stylesheet" href="/static/css/index.css?__inline">
+</head>
+<body>
+    <div id="tu-app">
+        <img class="logo" src="/static/img/tplus.png" alt="T语言">
+        <div class="intro">
+            <p class="slogan">tplus，加一下世界更精彩！</p>
+            <p class="inter">个性化图片社交，图你所爱</p>
+            <p class="niubi">300万安装</p>
+        </div>
+        <a href='http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus' class="open-app application">打开应用</a>
+    </div>
+    <header id="header">
+        <img class="user" src="" alt="" ／>
+        <div class="name"></div>
+        <div class="time"></div>
+    </header>
+    <div id="main">
+        <img class="preview head-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVDNjU5Njc1MDAyNzExRTRBNkQzODY2NzlDQjFENjE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVDNjU5Njc2MDAyNzExRTRBNkQzODY2NzlDQjFENjE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUM2NTk2NzMwMDI3MTFFNEE2RDM4NjY3OUNCMUQ2MTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUM2NTk2NzQwMDI3MTFFNEE2RDM4NjY3OUNCMUQ2MTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6ZDT3yAAAAFUlEQVR42mL6//8/AwgzMUABQIABAFP0Bf9CgSvEAAAAAElFTkSuQmCC" alt="大图" ／>
+    </div>
+    <h2 class="title">...</h2>
+    <div id='columns'>
+        <div class="col">
+            <div class="col-content">
+
+                <!-- <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／> -->
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content" style="padding: 2px 4px 2px 2px">
+                <!-- <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／> -->
+            </div>
+        </div>
+    </div>
+    <footer id='footer'>
+        <div class="tags">
+            <!-- <a href="">#21323</a> -->
+        </div>
+    </footer>
+    <div class="ui-scroll" style="display: none;">
+        <div class="ui-header">
+            <div class="btn-home">关闭</div>
+            <div class="page-nav">
+                loading...
+            </div>
+        </div>
+        <div class="ui-content">
+            <div id="scroller">
+                <div id="wrapper">
+                    <!-- <div class="slide">
+                        <div class="box">
+                            <img  src="./st/img/meinv.jpg" alt="小图" ／>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="ui-footer">
+            <div class="info"> </div>
+            <div class="buttons">
+                <a id="btn-share" class="application"><span></span><i>分享</i></a>
+                <a id="btn-fav" class="application"><span></span><i>点赞</i></a>
+                <a id="btn-download" class="application"><span></span><i>下载</i></a>
+                <a id="btn-comment" class="application"><span></span><i>评论</i></a>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <script src="/static/js/libs/iscroll.js"></script>
+    <script src="/static/js/libs/weixinapi.js"></script>
+    <script src="/static/js/libs/zepto.js"></script>
+    <script src="/static/js/libs/query-string.js"></script>
+    <script src="/static/js/libs/fastclick.js"></script>
+    <script src="/static/js/libs/underscore.js"></script>
+    <script src="/static/js/index.js?_r=2014081888"></script>
+    <div style="display: none">
+        <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb56d70cd151b9b12499799ad9cbdc5e0' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    </div>
+
+</body>
+</html>
+
+

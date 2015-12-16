@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>tplus 开启图片的无限可能</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        var userAgent = navigator.userAgent;
+        window._NA_ = {
+            TencentStore: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus',
+            Android: 'http://dd.myapp.com/16891/10AC8E846399A81020C050FA06856629.apk?fsname=com%2Etplus_1%2E2%2E6_9.apk',
+            IOS: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus',
+            isWeixin: false,
+            isAndroid: /android/ig.test(userAgent),
+            isIOS: /(Mac OS)|iphone/ig.test(userAgent)
+        };
+
+        var  __uri = function (url) {
+            return url;
+        };
+
+        window.weixinData = {
+            "appId": "", // 服务号可以填写appId
+            "imgUrl": 'http://tplusshare.qiniudn.com/static/img/tplus-23c8e3e4.png',
+            "link": location.href,
+            "desc": 'tplus，加一下世界更精彩',
+            "title": '从tplus分享了一张图片'
+        };
+    </script>
+    <style> html, body, h2, h4 {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 16px;
+	color: #4d4d4d;
+	margin-top: 80px;
+	background: #000;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+ul, li, p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#tu-app {
+	/*#137e8b*/
+	background: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 8px;
+	z-index: 99;
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	-webkit-box-align: center;
+	-o-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	height: 54px;
+}
+#tu-app img {
+	width: 54px;
+	height: auto;
+	margin-right: 6px;
+}
+#tu-app .intro {
+	color: #fff;
+	font: 13px normal bold;
+	width: 100px;
+	margin-left: 4px;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	-o-box-flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#tu-app .intro .slogan {
+	height: 16px;
+	line-height: 16px;
+	padding-bottom: 2px;
+}
+#tu-app .intro  .inter, #tu-app .intro  .niubi{
+	font-size: 12px;
+	color: orange;
+}
+#tu-app .open-app {
+ 
+ 
+    color: #fff;
+    display: block;
+    font: 12px normal;
+    height: 100%;
+    height: 24px;
+    background: #3CB82B;
+    padding: 4px;
+    line-height: 24px;
+    border-radius: 4px;
+ 	color: #fff;
+}
+#tu-app .close {
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	border-radius: 24px;
+	top: -24px;
+	right: -24px;
+	font: 10px normal;
+	line-height: 66px;
+	text-indent: 10px;
+	color: #fff;
+	background: rgb(91, 91, 91);
+}
+#header {
+	overflow: hidden;
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	-webkit-box-align: center;
+	-o-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+	margin: 12px 6px;
+}
+#header .user {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+    border-radius: 100%;
+    background: gray;
+    border: 1px solid #d8d8d8;
+    margin-left: 6px;
+}
+#header .name, #header .time {
+	color: #999;
+}
+#header .name {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	-o-box-flex: 1;
+	box-flex: 1;
+	color: #e37b1b;
+}
+h2.title {
+	font: 14px normal normal;
+	margin: 10px;
+	color: #999;
+}
+#main {
+	margin: 4px;
+	position: relative;
+}
+.head-img {
+	background: #2f2f2f;
+}
+#columns {
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+}
+#columns .col {
+	width: 50%;
+}
+#columns .col .col-content {
+	padding: 2px 2px 4px 4px;
+}
+#columns .col img {
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+#footer {
+	padding: 20px 0;
+	text-align: center;
+}
+#footer a{
+	display: inline-block;
+	margin: 4px;
+	color: #eee;
+	background: #ee6b1b;
+	padding: 4px 6px;
+}
+#footer .tag-icon {
+	background: url(http://tplusshare.qiniudn.com/static/img/icons/tag-64-5a6a72f5.png);
+	background-size: 24px;
+}
+/* iscroll */
+.ui-scroll {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+}
+.ui-header {
+	height: 40px;
+	z-index: 50;
+	margin-bottom: 8px;
+	height: 44px;
+	width: 100%;
+	background: rgba(47, 47, 47, 0.628);
+	position: absolute;
+	overflow: hidden;
+
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	-webkit-box-align: center;
+	-o-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	text-align: center;
+	color: #fff;
+}
+.ui-header .btn-home {
+	padding: 6px 12px;
+	background: rgb(47, 47, 47);
+	height: 100%;
+	line-height: 2em;
+	border-right: 1px solid #000;
+}
+.ui-header .page-nav {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-o-box-flex: 1;
+	-ms-box-flex: 1;
+}
+.ui-content {
+	position: absolute;
+	background: #000;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+}
+#scroller {
+	height: 100%;
+}
+/* 使其脱离文档流 */
+#wrapper {
+	float: left;
+	height: 100%;
+	width: 400%;
+	white-space: nowrap;
+	overflow: visible;
+}
+#wrapper .slide {
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+#wrapper .slide .box {
+	height: 100%;
+	width: 100%;
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	-webkit-box-align: center;
+	-o-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+}
+#wrapper .slide img {
+	display: block;
+	margin: 0 auto;
+}
+.ui-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 50;
+	background: rgba(95, 93, 93, 0.71) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAVSURBVAiZY2RgYGhgQAJMDGgAQwAAGEwAhuFhLsAAAAAASUVORK5CYII=);
+}
+.ui-footer .buttons {
+	display: -webkit-box;
+	display: -o-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+
+	padding: 4px 0 8px 0;
+	height: 40px;
+	color: 0;
+}
+.ui-footer .info {
+	color: #999;
+	height: 24px;
+	padding: 0;
+	margin: 5px 5px 0;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACAQMAAACjTyRkAAAABlBMVEUAAAD///+l2Z/dAAAAAnRSTlM9H5FziHMAAAAMSURBVHgBY2BgaAAAAIQAgdv2UsEAAAAASUVORK5CYII=) repeat-x left 23px;
+	font-size: 13px;
+	background-repeat: repeat-x;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-text-overflow: ellipsis;
+}
+.ui-footer .buttons a {
+	display: block;
+	color: #fff;
+	opacity: 0.6;
+	font-size: 14px;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-o-box-flex: 1;
+	-ms-box-flex: 1;
+	text-align: center;
+	position: relative;
+}
+.ui-footer .buttons a i {
+	font-style: normal;
+	display: block;
+}
+.ui-footer .buttons a span {
+	background: url(http://tplusshare.qiniudn.com/static/img/icons/btn-share-a2c7992a.png) no-repeat center center;
+	background-size: 24px;
+	width: 100%;
+	height: 24px;
+	display: block;
+}
+
+#btn-share span {
+	background-image: url(http://tplusshare.qiniudn.com/static/img/icons/btn-share-a2c7992a.png)
+}
+#btn-fav span {
+	background-image: url(http://tplusshare.qiniudn.com/static/img/icons/btn-fav-851659cb.png)
+}
+#btn-download span {
+	background-image: url(http://tplusshare.qiniudn.com/static/img/icons/btn-download-eab2af9b.png) 
+}
+#btn-comment span {
+	background-image: url(http://tplusshare.qiniudn.com/static/img/icons/btn-comment-2b582b14.png)
+}
+
+.p-label {
+	position: absolute;
+	color: #fff;
+	background: rgba(0,0,0,0.55);
+	height: 20px;
+	padding: 0 8px 0 12px;
+	line-height: 20px;
+	font-size: 12px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+
+	-o-border-top-right-radius: 3px;
+	-o-border-bottom-right-radius: 3px;
+
+	-webkit-border-top-left-radius: 40px;
+	-webkit-border-bottom-left-radius: 40px;
+
+	-o-border-top-left-radius: 40px;
+	-o-border-bottom-left-radius: 40px;
+	white-space: nowrap;
+}
+
+.dot {
+	-webkit-animation: dot-highlight  1s infinite;
+	-o-animation: dot-highlight  1s infinite;
+
+
+	width: 6px;
+	height: 6px;
+	border-radius: 100%;
+	border: 1px solid #e8e8e8;
+	line-height: 1px;
+	text-align: center;
+	top: 6px;
+	left: -10px;
+	position: absolute;
+	background: #fff;
+}
+.p-label-right {
+	padding: 0 12px 0 8px;
+	-webkit-border-top-right-radius: 40px;
+	-webkit-border-bottom-right-radius: 40px;
+
+	-o-border-top-right-radius: 40px;
+	-o-border-bottom-right-radius: 40px;
+
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-o-border-top-left-radius: 3px;
+	-o-border-bottom-left-radius: 3px;
+}
+.p-label-right .dot {
+	left: auto;
+	right: -10px;
+}
+
+
+/*
+@ webkit-animation
+ */
+@-webkit-keyframes dot-highlight {
+	0% {
+		-webkit-box-shadow: 0 0 5px 2px rgba(255,255,255,0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 5px 2px rgba(131,241,241,0.7);
+	}
+}
+@-o-keyframes dot-highlight {
+	0% {
+		-o-box-shadow: 0 0 5px 5px rgba(255,255,255,0);
+	}
+	100 {
+		-o-box-shadow: 0 0 5px 5px rgba(131,241,241,0.7);
+	}
+}
+</style>
+</head>
+<body>
+    <div id="tu-app">
+        <img class="logo" src="http://tplusshare.qiniudn.com/static/img/tplus-23c8e3e4.png" alt="T语言">
+        <div class="intro">
+            <p class="slogan">tplus，加一下世界更精彩！</p>
+            <p class="inter">个性化图片社交，图你所爱</p>
+            <p class="niubi">300万安装</p>
+        </div>
+        <a href='http://a.app.qq.com/o/simple.jsp?pkgname=com.tplus' class="open-app application">打开应用</a>
+    </div>
+    <header id="header">
+        <img class="user" src="" alt="" ／>
+        <div class="name"></div>
+        <div class="time"></div>
+    </header>
+    <div id="main">
+        <img class="preview head-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVDNjU5Njc1MDAyNzExRTRBNkQzODY2NzlDQjFENjE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVDNjU5Njc2MDAyNzExRTRBNkQzODY2NzlDQjFENjE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUM2NTk2NzMwMDI3MTFFNEE2RDM4NjY3OUNCMUQ2MTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUM2NTk2NzQwMDI3MTFFNEE2RDM4NjY3OUNCMUQ2MTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6ZDT3yAAAAFUlEQVR42mL6//8/AwgzMUABQIABAFP0Bf9CgSvEAAAAAElFTkSuQmCC" alt="大图" ／>
+    </div>
+    <h2 class="title">...</h2>
+    <div id='columns'>
+        <div class="col">
+            <div class="col-content">
+
+                <!-- <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／> -->
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content" style="padding: 2px 4px 2px 2px">
+                <!-- <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／>
+                <img class="preview" src="./st/img/meinv.jpg" alt="小图" ／> -->
+            </div>
+        </div>
+    </div>
+    <footer id='footer'>
+        <div class="tags">
+            <!-- <a href="">#21323</a> -->
+        </div>
+    </footer>
+    <div class="ui-scroll" style="display: none;">
+        <div class="ui-header">
+            <div class="btn-home">关闭</div>
+            <div class="page-nav">
+                loading...
+            </div>
+        </div>
+        <div class="ui-content">
+            <div id="scroller">
+                <div id="wrapper">
+                    <!-- <div class="slide">
+                        <div class="box">
+                            <img  src="./st/img/meinv.jpg" alt="小图" ／>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="ui-footer">
+            <div class="info"> </div>
+            <div class="buttons">
+                <a id="btn-share" class="application"><span></span><i>分享</i></a>
+                <a id="btn-fav" class="application"><span></span><i>点赞</i></a>
+                <a id="btn-download" class="application"><span></span><i>下载</i></a>
+                <a id="btn-comment" class="application"><span></span><i>评论</i></a>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="http://tplusshare.qiniudn.com/static/css/animate-e78c4ece.css">
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/iscroll-488772bf.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/weixinapi-243938b6.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/zepto-67292f74.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/query-string-189e4cbe.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/fastclick-0717a4ca.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/libs/underscore-fa02f80b.js"></script>
+    <script src="http://tplusshare.qiniudn.com/static/js/index-2b99c663.js?_r=2014081888"></script>
+    <div style="display: none">
+        <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb56d70cd151b9b12499799ad9cbdc5e0' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    </div>
+
+</body>
+</html>
+
+
